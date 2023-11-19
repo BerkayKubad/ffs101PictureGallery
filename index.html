@@ -3,10 +3,76 @@
 <head>
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+
+        .card-img-top {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            cursor: pointer;
+        }
+
+        .w {
+            min-width: 350px;
+            min-height: 300px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container text-center mt-5">
+        <div class="row">
+            <h2>Resim Galerisi</h2>
+        </div>
+    </div>
 
+    <div class="container-fluid text-center">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="" id="modalImage" class="img-fluid" alt="Resim Açýklamasý">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col w" data-bs-toggle="modal" data-bs-target="#myModal" onclick="updateModal('images/1.jpg')">
+                <img src="images/1.jpg" class="card-img-top" alt="car1">
+            </div>
+            <div class="col w" data-bs-toggle="modal" data-bs-target="#myModal" onclick="updateModal('images/2.jpg')">
+                <img src="images/2.jpg" class="card-img-top" alt="car2">
+            </div>
+            <div class="col w" data-bs-toggle="modal" data-bs-target="#myModal" onclick="updateModal('images/3.jpg')">
+                <img src="images/3.jpg" class="card-img-top" alt="car3">
+            </div>
+            <div class="col w" data-bs-toggle="modal" data-bs-target="#myModal" onclick="updateModal('images/4.jpg')">
+                <img src="images/4.jpg" class="card-img-top" alt="car4">
+            </div>
+            <div class="col w" data-bs-toggle="modal" data-bs-target="#myModal" onclick="updateModal('images/5.jpg')">
+                <img src="images/5.jpg" class="card-img-top" alt="car5">
+            </div>
+            <div class="col w" data-bs-toggle="modal" data-bs-target="#myModal" onclick="updateModal('images/6.jpg')">
+                <img src="images/6.jpg" class="card-img-top" alt="car6">
+            </div>
+            <div class="col w" data-bs-toggle="modal" data-bs-target="#myModal" onclick="updateModal('images/7.jpg')">
+                <img src="images/7.jpg" class="card-img-top" alt="car7">
+            </div>
+            <div class="col w" data-bs-toggle="modal" data-bs-target="#myModal" onclick="updateModal('images/8.jpg')">
+                <img src="images/8.jpg" class="card-img-top" alt="car8">
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+        function updateModal(imageSrc) {
+            document.getElementById("modalImage").src = imageSrc;
+        }
+    </script>
 </body>
+
 </html>
